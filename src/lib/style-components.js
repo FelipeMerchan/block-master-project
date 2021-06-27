@@ -9,6 +9,10 @@ const elements = [
   'article',
   'footer',
   'header',
+  'form',
+  'input',
+  'button',
+  'select',
   'figure',
 ]
 
