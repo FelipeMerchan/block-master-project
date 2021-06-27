@@ -19,8 +19,6 @@ const HeaderContent = styled.div`
   gap: 1rem;
   block-size: 7rem;
   inline-size: 100%;
-  padding-inline-start: 1.5rem;
-  padding-inline-end:   1.5rem;
 `
 
 const HeaderLogoWrapper = styled.figure`
