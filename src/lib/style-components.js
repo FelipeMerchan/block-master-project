@@ -8,7 +8,8 @@ const elements = [
   'img',
   'article',
   'footer',
-  'header'
+  'header',
+  'figure',
 ]
 
 function buildStyles(strings, dynamicValues, props) {
