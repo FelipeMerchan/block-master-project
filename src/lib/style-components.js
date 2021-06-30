@@ -8,7 +8,15 @@ const elements = [
   'img',
   'article',
   'footer',
-  'header'
+  'header',
+  'form',
+  'input',
+  'button',
+  'select',
+  'figure',
+  'section',
+  'article',
+  'a',
 ]
 
 function buildStyles(strings, dynamicValues, props) {
