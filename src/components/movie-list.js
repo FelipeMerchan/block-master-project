@@ -4,6 +4,8 @@ import styled from '../lib/style-components.js'
 import Wrapper from './wrapper.js'
 import Movie from './movie.js'
 import store from '../store.js'
+import api from '../api.js'
+import { ADD_MOVIES } from '../actions/index.js'
 
 const MovieListStyled = styled.section`
   display: grid;
@@ -14,6 +16,27 @@ const MovieListStyled = styled.section`
 `
 
 class MovieList extends Component {
+  state = {
+    page: 1
+  }
+
+  getPage = async (page) => {
+    const { results } = await api.moviePage(page)
+    store.dispatch({
+      type: ADD_MOVIES,
+      payload: results
+    })
+    console.log()
+  }
+
+  componentDidMount() {
+    this.getPage(this.state.page)
+    store.subscribe(() => {
+      console.log('Me actualicé')
+      this.setState()
+    })
+  }
+
   render() {
     const state = store.getState()
     const movieListId = state.list[state.filter]
