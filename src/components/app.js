@@ -5,6 +5,7 @@ import BannerSlider from './banner-slider.js'
 import MovieList from './movie-list.js'
 
 const AppStyled = styled.div`
+  padding-block-end: 6.25rem;
   background-color: #0F0E17;
 `
 
